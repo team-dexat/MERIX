@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MERIX</string>
+    <string name="title_activity_main">MERIX</string>
+    <string name="package_name">in.gov.doca.merix</string>
+    <string name="custom_url_scheme">in.gov.doca.merix</string>
+</resources>

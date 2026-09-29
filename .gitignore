@@ -30,3 +30,16 @@ yarn-error.log*
 Thumbs.db
 .idea/
 .vscode/
+
+# Android & Gradle
+.gradle/
+**/.gradle/
+build/
+**/build/
+local.properties
+**/local.properties
+.cxx/
+**/.cxx/
+*.apk
+*.aab
+
