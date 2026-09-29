@@ -1,0 +1,46 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: merix-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:merixdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.h2.Driver}
+  jpa:
+    database-platform: ${SPRING_JPA_DATABASE_PLATFORM:org.hibernate.dialect.H2Dialect}
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+# OpenAPI / Swagger Documentation Config
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+# Application Custom Properties
+merix:
+  jwt:
+    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    expiration-ms: 86400000 # 24 hours
+  qr:
+    base-url: "https://merix.gov.in/verify"
+  sla:
+    scrutiny-hours: 48
+    allocation-hours: 24
+    verification-days: 7
+  supabase:
+    url: "https://cnczokysrenqmkloefqu.supabase.co"
+    anon-key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuY3pva3lzcmVucW1rbG9lZnF1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAwMDkyNzUsImV4cCI6MjEwNTU4NTI3NX0.KKCM9mRfneUnOUyH2yMU3K50P6U7cqY01cLrSL7Y9xo"
+
